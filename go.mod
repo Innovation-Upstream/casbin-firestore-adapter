@@ -1,4 +1,4 @@
-module github.com/Innovation-Upstream/casbin-firestore-adapter
+module github.com/innovation-upstream/casbin-firestore-adapter
 
 go 1.16
 
