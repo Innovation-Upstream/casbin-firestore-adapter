@@ -2,7 +2,6 @@ package firestoreadapter
 
 import (
 	"context"
-	"fmt"
 	"runtime"
 
 	"cloud.google.com/go/firestore"
@@ -301,6 +300,5 @@ func loadPolicyLine(line CasbinRule, model model.Model) {
 	}
 
 LineEnd:
-	fmt.Printf("%+v\n", tokens)
 	model[sec][key].Policy = append(model[sec][key].Policy, tokens)
 }
