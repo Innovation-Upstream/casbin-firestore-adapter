@@ -82,6 +82,18 @@ func (a *adapter) LoadPolicy(model model.Model) error {
 		loadPolicyLine(rule, model)
 	}
 
+	pType := "p"
+	for _, pvals := range model["p"]["p"].Policy {
+		if len(model["p"][pType].Tokens) != len(pvals) {
+			fmt.Printf(
+				"test: invalid policy size: expected %d, got %d, pvals: %v\n, tkns: %+v",
+				len(model["p"][pType].Tokens),
+				len(pvals),
+				pvals,
+				model["p"][pType].Tokens,
+			)
+		}
+	}
 	return nil
 }
 
