@@ -263,7 +263,7 @@ func loadPolicyLine(line CasbinRule, model model.Model) {
 	var lineBuf bytes.Buffer
 
 	lineBuf.Grow(64)
-	//lineBuf.WriteString(line.PType)
+	lineBuf.WriteString(line.PType)
 
 	args := [6]string{line.V0, line.V1, line.V2, line.V3, line.V4, line.V5}
 	for _, arg := range args {
