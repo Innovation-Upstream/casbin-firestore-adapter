@@ -272,6 +272,6 @@ func loadPolicyLine(line CasbinRule, model model.Model) {
 		lineBuf.WriteString(arg)
 	}
 
-	fmt.Printf("%+v\n", lineBuf.String())
+	fmt.Printf("LOADED: %+v\n", lineBuf.String())
 	persist.LoadPolicyLine(lineBuf.String(), model)
 }
