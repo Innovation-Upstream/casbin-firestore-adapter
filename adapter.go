@@ -3,7 +3,6 @@ package firestoreadapter
 import (
 	"bytes"
 	"context"
-	"fmt"
 	"runtime"
 
 	"cloud.google.com/go/firestore"
@@ -272,6 +271,5 @@ func loadPolicyLine(line CasbinRule, model model.Model) {
 		lineBuf.WriteString(arg)
 	}
 
-	fmt.Printf("LOADED: %+v\n", lineBuf.String())
 	persist.LoadPolicyLine(lineBuf.String(), model)
 }
