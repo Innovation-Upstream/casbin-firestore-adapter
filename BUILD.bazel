@@ -1,7 +1,7 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
-# gazelle:prefix github.com/Innovation-Upstream/casbin-firestore-adapter
+# gazelle:prefix github.com/innovation-upstream/casbin-firestore-adapter
 # gazelle:go_naming_convention import_alias
 # gazelle:go_naming_convention_external go_default_library
 gazelle(
@@ -15,7 +15,7 @@ go_library(
         "adapter.go",
         "model.go",
     ],
-    importpath = "github.com/Innovation-Upstream/casbin-firestore-adapter",
+    importpath = "github.com/innovation-upstream/casbin-firestore-adapter",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_casbin_casbin_v2//model:go_default_library",
